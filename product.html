@@ -1,3 +1,5 @@
+<html>
+
 <head>
     <title>Eau Rose Eau De Toilette Limeted Edition/ Diptique Paris</title>
 
@@ -6,115 +8,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
 
-    <style>
+    <link rel="stylesheet" sype="text/css" href="stylesheet.css">
 
-        body {
-            background-color: black;
-            font-family: 'Sen', sans-serif;
-        }
+    <script>
 
-        .flex-container {
-            display: flex;
-            align-items:flex-start;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+        let plus = 
 
-        .product {
-            margin: 0 30px;
-            max-width: 500px;
-            display: flex;
-            flex-direction: column;
-            align-items:center;
-            justify-content: center;
-            text-align: center;
-        }
+    </script>
 
-        .product >img {
-            width: 120%;
-            min-width: 400px;
-            background-image:url("image/bg2.png");
-            background-size: cover;
-            background-position:center;
-
-        }
-
-        .product >h2 {
-            padding: 20px;
-            color:seashell;
-        }
-
-        .price {
-            font-size: 18px;
-            color: seashell;
-        }
-
-        .detail {
-            font-size: 14px;
-            color:seashell;
-        }
-
-        @media screen and (max-width: 768px) {
-            .detail {
-                font-size: 14px;
-                color:seashell;
-                text-align: center;
-            }   
-        }
-
-        .myinfo {
-            margin: 90px 100px;
-            max-width: 500px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-
-            color:seashell;
-        }
-
-        @media screen and (max-width: 768px) {
-            .myinfo {
-                margin: 40px 50px;
-                align-items: center;
-            } 
-        }
-
-        hr {
-            height: 1px;
-            width: 100%;
-            border: none;
-            background: seashell;
-            margin: 30px auto;
-        }
-
-        .purchase {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            align-self: center;
-        }
-
-        .purchase >button {
-            padding: 15px 25px;
-            font-size: 18px;
-            border-radius: 5px;
-            border-color: darksalmon;
-            border-style: solid;
-            border-width: 1px;
-            background-color: transparent;
-            color: darksalmon;
-        }
-
-        .purchase >button:hover {
-            background-color: darksalmon;
-            color: black;
-        }
-
-    </style>
 </head>
 
 <body>
@@ -146,26 +49,34 @@
         <hr>
 
         <div class="purchase">
-        <h3>Customer Service</h3>
+        <div class="purchase-title">Customer Service</div>
         <p>
-            <form>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Your Email">
-                <div class="input-group-append">
-                <span class="input-group-text">@google.com</span>
+
+             <div class="customer-box">
+
+                <input type="text" id="email-box" placeholder="Your E-mail">
+
+                <div class="number-box">
+                <select name="numberCode" id="numberCode">
+                    <option value="010" Selected>010</option>
+                    <option value="011" >011</option>
+                    <option value="016" >016</option>
+                    <option value="017" >017</option>
+                    <option value="018" >018</option>
+                    <option value="019" >019</option>
+                </select>
+                <input type="text" id="num-box" placeholder="Your Number">
                 </div>
+
+                <div class="Quantity">
+                    <label>Quantity</label>
+                    <button id="minus" type="button">-</button>
+                    <h5 id="quantity-default">1</h5>
+                    <button id="plus" type="button">+</button>
+                </div>
+
             </div>
 
-            <div class="input-group2">
-                <select class="custom-select" id="inputGroupSelect01">
-                  <option selected>Quantity</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
-              </div>
-
-            </form>
         </p>
 
         <button type="button" onclick="location.href='https://www.diptyqueparis.com/en_eu/p/eau-rose-eau-de-toilette-limited-edition-100ml.html?subcategory=354'">
@@ -181,3 +92,5 @@
 </div>
 
 </body>
+
+</html>
