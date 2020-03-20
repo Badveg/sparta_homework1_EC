@@ -77,16 +77,29 @@
         margin: 30px auto;
     }
 
-    .purchase {
+    .customer-warp {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        align-self: center;
     }
 
-    .purchase-title {
+    .customer-warp >h4 {
+        text-align: center;
         font-size: 24px;
+    }
+
+    .customer-service {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 768px) {
+        .customer-service {
+            flex-direction: column;
+        } 
     }
 
     .number-box {
@@ -101,42 +114,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100%;
-    }
-
-    .Quantity {
-        margin: 10px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 120%;
-        border-style: solid;
-        border-width: 0;
-        color: white;
-    }
-
-    .Quantity >button {
-        margin: 15px;
-        width: 30px;
-        height: 30px;
-        border-style: solid;
-        border-width: 1px;
-        border-color: white;
-        color: white;
-        background-color: transparent;
-        font-size: 30px;
-        line-height: 15px;
-    }
-
-    .Quantity >label {
-        padding-right: 20px;
-        color: seashell;
-    }
-
-    #quantity-default {
-        margin: auto 10px;
-        font-size: 30px;
     }
 
     #email-box {
@@ -152,7 +129,7 @@
 
     #num-box {
         margin: 10px 0;
-        width: 55%;
+        width: 50%;
         padding: 7px 13px;
         outline: 0;
         border-width: 0 0 1px;
@@ -163,7 +140,7 @@
 
     #numberCode {
         margin: 10px 0;
-        width: 25%;
+        width: 30%;
         padding: 7px 10px;
         outline: 0;
         border-width: 0;
@@ -171,7 +148,54 @@
         color: rgb(185, 185, 185);
     }
 
-    .purchase >button {
+    .Quantity {
+        margin: 15px 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        border-style: solid;
+        border-width: 0;
+        color: white;
+    }
+
+    .Quantity >button {
+        margin: 15px;
+        width: 35px;
+        height: 35px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: white;
+        color: white;
+        background-color: transparent;
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .Quantity >button:hover {
+        background-color: white;
+        color: black;
+    }
+
+    #count {
+        width: 50px;
+        margin: auto 10px;
+        font-size: 30px;
+        background-color: transparent;
+        color: white;
+        border:none;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 768px) {
+        .Quantity {
+            margin-top: 30px;
+        } 
+    }
+
+    .customer-warp >button {
+        margin: 20px auto;
         padding: 15px 25px;
         font-size: 18px;
         border-radius: 5px;
@@ -182,7 +206,13 @@
         color: darksalmon;
     }
 
-    .purchase >button:hover {
+    @media screen and (max-width: 768px) {
+        .customer-warp >button {
+            margin: 0 auto;
+        } 
+    }
+
+    .customer-warp >button:hover {
         background-color: darksalmon;
         color: black;
     }

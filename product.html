@@ -14,7 +14,57 @@
 
     <script>
 
-        let plus = 
+        function add() {
+            document.getElementById("count").value++;
+        }
+
+        function sub() {
+            if (document.getElementById("count").value >1) {
+                document.getElementById("count").value--;
+            } else {
+                alert ('Incorrect Quantity!');
+            }
+            
+        }
+
+        function input() {
+            let email = document.getElementById("email-box").value;
+            let number = document.getElementById("num-box").value;
+            let Eform = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+            let Nform = /(?:\d{3}|\d{4})\d{4}$/;
+
+            if (email === '' && number === '') {
+                return alert ('Input your info.'); 
+            }
+
+
+            if (Eform.test(email) === false && Nform.test(number) === false) {
+                return alert ('Check your info.')
+            }
+
+            if (Eform.test(email) === false ) {
+                document.getElementById("email-box").style["color"] = "red";
+                document.getElementById("email-box").style["border-width"] = "0 0 1px";
+                document.getElementById("email-box").style["border-color"] = "red";
+                document.getElementById("email-box").focus();
+            } else {
+                document.getElementById("email-box").style = "";
+                document.getElementById("email-box").placeholder = "Your E-mail";
+                document.getElementById("email-box").className = "";
+            }
+
+            if (Nform.test(number) === false ) {
+                alert ('Check your number.');
+                document.getElementById("num-box").style["color"] = "red";
+                document.getElementById("num-box").style["border-width"] = "0 0 1px";
+                document.getElementById("num-box").style["border-color"] = "red";
+                document.getElementById("num-box").focus();
+            } else {
+                document.getElementById("num-box").style = "";
+                document.getElementById("num-box").placeholder = "Your Number";
+                document.getElementById("num-box").className = "";
+            }
+        }
 
     </script>
 
@@ -48,9 +98,11 @@
 
         <hr>
 
-        <div class="purchase">
-        <div class="purchase-title">Customer Service</div>
+        <div class="customer-warp">
+        <h4>Customer Service</h4>
         <p>
+
+        <div class="customer-service">
 
              <div class="customer-box">
 
@@ -67,26 +119,24 @@
                 </select>
                 <input type="text" id="num-box" placeholder="Your Number">
                 </div>
-
-                <div class="Quantity">
-                    <label>Quantity</label>
-                    <button id="minus" type="button">-</button>
-                    <h5 id="quantity-default">1</h5>
-                    <button id="plus" type="button">+</button>
-                </div>
-
             </div>
+
+            <div class="Quantity">
+                <button id="minus" type="button" onclick="sub()">-</button>
+                <input type="text" id="count" value="1"></input>
+                <button id="plus" type="button" onclick="add()">+</button>
+            </div>
+
+        </div>
+
 
         </p>
 
-        <button type="button" onclick="location.href='https://www.diptyqueparis.com/en_eu/p/eau-rose-eau-de-toilette-limited-edition-100ml.html?subcategory=354'">
+        <button type="button" onclick="input()">
         <strong>
             <div>Make a Purchase</div>
         </strong>
         </button>
-    
-    </div>
-
     </div>
 
 </div>
